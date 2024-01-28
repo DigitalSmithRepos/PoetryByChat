@@ -1,0 +1,15 @@
+{
+    "blanks": [
+        "unit of distance",
+        "proper noun",
+        "adjective",
+        "noun"
+    ],
+    "templateLines": [
+        "Half a {0}, half a {0},",
+        "Half a {0} onward,",
+        "All in the valley of {1}\n  Rode the six hundred.",
+        "“Forward, the {2} Brigade!\n  Charge for the {3}!” he said.",
+        "Into the valley of {1}\n  Rode the six hundred."
+    ]
+}

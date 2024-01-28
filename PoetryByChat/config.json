@@ -1,0 +1,13 @@
+{
+	//A Twitch OAuth token which can be used to connect to the chat 
+	//Can be obtained using https://twitchapps.com/tmi/
+	"oauthToken": "REPLACE THIS", //KEEP THIS SECRET
+	//The username which was used to generate the OAuth token
+	"username": "REPLACE THIS",
+	//Whose channel will this be on
+	"channelToConnectTo": "REPLACE THIS",
+	// [milliseconds] How much time to give other chatters to contribute before creating the poem 
+	"poemCreationDelay": 15000,
+	// [milliseconds] Minimum time between each message sent (to avoid throttling)
+	"sendDelay": 500
+}

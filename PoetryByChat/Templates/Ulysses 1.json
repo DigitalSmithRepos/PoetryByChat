@@ -1,0 +1,16 @@
+{
+    "blanks": [
+        "noun",
+        "plural noun",
+        "noun",
+        "adjective",
+        "verb"
+    ],
+    "templateLines": [
+        "It little profits that an idle {0},",
+        "By this still hearth, among these barren {1},",
+        "Match'd with an aged {2}, I mete and dole",
+        "Unequal laws unto a {3} race,",
+        "That hoard, and sleep, and {4}, and know not me."
+    ]
+}

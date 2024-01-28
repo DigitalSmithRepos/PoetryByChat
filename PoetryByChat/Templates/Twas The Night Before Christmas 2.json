@@ -1,0 +1,14 @@
+{
+    "blanks": [
+        "plural noun",
+        "plural noun",
+        "article of clothing",
+        "plural noun"
+    ],
+    "templateLines": [
+        "The {0} were nestled all snug in their beds,",
+        "While visions of {1} danced in their heads;",
+        "And mamma in her {2}, and I in my cap,",
+        "Had just settled our {3}  for a long winter's nap,"
+    ]
+}
