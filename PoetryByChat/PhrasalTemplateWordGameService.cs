@@ -1,7 +1,15 @@
-﻿using System.Threading;
+﻿using NAudio;
+using System;
+using System.Diagnostics;
+using System.Net;
+using System.Net.Http;
+using System.Threading;
+using System.Web;
+using TwitchLib.Api.ThirdParty.ModLookup;
 using TwitchLib.Client;
 using TwitchLib.Client.Events;
 using TwitchLib.Client.Models;
+using TwitchLib.Communication.Interfaces;
 
 public class PhrasalTemplateWordGameService
 {
@@ -31,10 +39,9 @@ public class PhrasalTemplateWordGameService
         OnJoinedChannel(e.Channel);
     }
 
-    private void OnJoinedChannel(string channel)
+    private void OnJoinedChannel(string channel) 
     {
         client.SendMessage(channel, $"Poerty service has been connected to the channel");
-
         ConsoleUtility.OnClose += () =>
         {
             OnLeftChannel(channel);
@@ -167,14 +174,25 @@ public class PhrasalTemplateWordGameService
             var responseList = responses[i];
             filledBlanks[i] = responseList[Random.Shared.Next(responseList.Count)];
         }
-
-        foreach (var line in template.BuildLines(filledBlanks))
+        var lines = template.BuildLines(filledBlanks).ToArray();
+        foreach (var line in lines)
         {
             client.SendMessage(channel, line);
         }
         client.SendMessage(channel, $"— Chat");
-    }
+        if(!string.IsNullOrWhiteSpace(Config.ReadSpeakerAPIKey))
+        {
+            try
+            {
+                AudioUtility.ReadText(string.Join(" ", lines));
+            }
+            catch (Exception ex) 
+            { 
+                Console.WriteLine(ex);
+            }
 
+        }
+    }
 
     public static string[] GetPhrasalTemplateFilePaths(string phrasalTemplatesDirectory)
     {

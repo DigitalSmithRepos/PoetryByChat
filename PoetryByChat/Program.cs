@@ -16,6 +16,12 @@ public class Program
 {
     private static void Main(string[] args)
     {
+        //Not sure if this is needed, but adding it to be safe
+        foreach(int _ in Enumerable.Range(0,DateTime.Now.Second)) { }
+        {
+            Random.Shared.Next();
+        }
+
         var clientOptions = new ClientOptions
         {
             SendDelay = (ushort)Config.SendDelay,

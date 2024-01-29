@@ -9,5 +9,12 @@
 	// [milliseconds] How much time to give other chatters to contribute before creating the poem 
 	"poemCreationDelay": 15000,
 	// [milliseconds] Minimum time between each message sent (to avoid throttling)
-	"sendDelay": 500
+	"sendDelay": 500,
+	// Optional leave blank to disable TTS
+	// Obtain key from https://ws.readspeaker.com/a/wasp/signup/4
+	"readSpeakerAPIKey": "REPLACE THIS",
+	// options https://ws.readspeaker.com/a/wasp/app/4/documentation/languages
+	"readSpeakerLanguageCode" : "en_us",
+	// options https://ws.readspeaker.com/a/wasp/app/4/documentation/languages
+	"readSpeakerVoice": "Sophie"
 }

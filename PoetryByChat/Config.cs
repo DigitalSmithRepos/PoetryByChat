@@ -30,6 +30,18 @@ public class Config
     [JsonInclude]
     public int sendDelay = 500;
 
+    public static string ReadSpeakerAPIKey => Instance.readSpeakerAPIKey;
+    [JsonInclude]
+    public string readSpeakerAPIKey = "";
+
+    public static string ReadSpeakerLanguageCode => Instance.readSpeakerLanguageCode;
+    [JsonInclude]
+    public string readSpeakerLanguageCode = "en_us";
+
+    public static string ReadSpeakerVoice => Instance.readSpeakerVoice;
+    [JsonInclude]
+    public string readSpeakerVoice = "Sophie";
+
     public static ConnectionCredentials ConnectionCredentials
         => Instance.GetConnectionCredentials();
     private ConnectionCredentials _connectionCredentials = null!;
